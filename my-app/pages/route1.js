@@ -10,6 +10,5 @@ export default function Route1() {
         <div>route1</div>
         <button className='btn btn-dark mt-2' onClick={() => router.reload("/route2")}>route2</button>
     </div>
-    
-  )
+    )
 }
