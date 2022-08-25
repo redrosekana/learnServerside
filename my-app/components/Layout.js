@@ -1,11 +1,13 @@
 import React from 'react'
 import {useRouter} from 'next/router'
+
 export default function Layout({children}) {
     const router = useRouter()
 
     const clickBtn = () => {
         router.push(`/path/${Math.floor(1+Math.random()*5)}`)
     }
+    //console.log("app")
     return (
     <>
         <div className='p-3'>
