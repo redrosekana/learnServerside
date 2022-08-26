@@ -11,7 +11,9 @@ export default function Layout({children}) {
     return (
     <>
         <div className='p-3'>
-            <button className='btn btn-primary' onClick={()=> router.push("/server")}>server</button>   
+            <button className='btn btn-danger' onClick={()=> router.push("/")}>home</button>   
+            <button className='btn btn-dark ms-2' onClick={()=> router.push("/extra")}>extra</button>   
+            <button className='btn btn-primary ms-2' onClick={()=> router.push("/server")}>server</button>   
             <button className='btn btn-secondary ms-2' onClick={()=> router.push("/static")}>static</button>   
             <button className='btn btn-success ms-2' onClick={()=> router.push("/difServer")}>difServer</button>   
             <button className='btn btn-info ms-2' onClick={()=> router.push("/difStatic")}>difStatic</button>   

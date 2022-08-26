@@ -8,7 +8,7 @@ export default function Path(props) {
   )
 }
 
-export async function getStaticPaths(context) {
+export async function getStaticPaths() {
     /* const response = await fetch("http://127.0.0.1:8000/user")
     const data = await response.json()
     
@@ -19,38 +19,23 @@ export async function getStaticPaths(context) {
     // ได้ object นี้ { locales: null, defaultLocale: null }
     
     let a = [{ 'params': { 'id': '1' } }, { 'params': { 'id': '2' } }, { 'params': { 'id': '3' } }, { 'params': { 'id': '4' } }, { 'params': { 'id': '5' } }]
+    //console.log(a)
     return {
         paths:a,
         fallback: false,
     }
-  }
+}
 
 export async function getStaticProps(context) {
     const response = await fetch(`http://127.0.0.1:8000/user/${context.params.id}`)
     const data = await response.json()
-    console.log(context)
+    //console.log(context)
     return {
         props: {
             data   
         }
     }
-  }
-
-
-
-/* export async function getStaticPaths(){
-    const response = await fetch("http://127.0.0.1:8000/user")
-    const data = await response.json()
-    
-    const path = data.map((e) => {
-        return {params: {id : String(e.id) }}
-    })
-    
-    return {
-        paths: path,
-        fallback: true,
-    }
-}*/
+}
 
 
 
