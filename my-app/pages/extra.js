@@ -33,18 +33,11 @@ export default function Extra() {
     }
   }
   
-  function Mchange(){
-    setM(m+1)
-    p++
-    console.log(p)
-  }
-  
-  
   return (
     <>
       <p className='text-center fs-2'>learn nextjs server rendering {m}</p>
       <div className='text-center'>
-        <button className='btn btn-danger' onClick={() => Mchange()}>กด</button>
+        <button className='btn btn-danger' onClick={() => setM(m+1)}>กด</button>
       </div>
       
     </>

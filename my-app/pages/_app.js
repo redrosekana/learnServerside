@@ -3,7 +3,6 @@ import Head from "next/head"
 import Script from "next/script"
 import Layout from "../components/Layout"
 
-
 function MyApp({ Component, pageProps }) {
   return (
     <>
