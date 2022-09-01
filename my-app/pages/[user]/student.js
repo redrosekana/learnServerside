@@ -17,7 +17,7 @@ export async function getStaticPaths() {
         { 'params': { 'user': '4' } }, 
         { 'params': { 'user': '5' } }
     ]
-    console.log(a)
+    //console.log(a)
     return {
         paths:a,
         fallback: false,
@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-    const response = await fetch(`http://127.0.0.1:8000/user/${context.params.user}`)
+    const response = await fetch(`http://127.0.0.1:8000/users/${context.params.user}`)
     const data = await response.json()
     if (context.params.user === "3"){
         return {
