@@ -22,6 +22,11 @@ app.get("/user/:id",(req,res)=>{
     res.status(200).json(user[req.params.id-1 || 0])
 })
 
+app.get("/users/:user",(req,res)=>{
+    console.log(req.params)
+    res.status(200).json(user[req.params.user-1 || 0])
+})
+
 const randomMath = () => {
     return Math.floor(Math.random()*100)
 }
