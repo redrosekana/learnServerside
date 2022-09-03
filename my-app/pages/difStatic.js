@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Static({data}) {
   return (
-    <div>
-      <p>{data.num}</p>
-    </div>
+    <main className='container p-3'>
+      <p className='display-3 text-center'>{data.num}</p>
+    </main>
   ) 
 }
 
@@ -14,7 +14,6 @@ export async function getStaticProps(){
     return {
         props:{
             data
-        },
-        revalidate:5
+        }
     }
 }

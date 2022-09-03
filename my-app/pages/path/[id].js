@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Path(props) {
   return (
-    <div>
-        <p>{props.data.id} {props.data.name}</p>
+    <div className='container p-3'>
+        <p className='display-3 text-center'>{props.data.id} {props.data.name}</p>
     </div>
   )
 }
@@ -18,7 +18,13 @@ export async function getStaticPaths() {
     //console.log(context)
     // ได้ object นี้ { locales: null, defaultLocale: null }
     
-    let a = [{ 'params': { 'id': '1' } }, { 'params': { 'id': '2' } }, { 'params': { 'id': '3' } }, { 'params': { 'id': '4' } }, { 'params': { 'id': '5' } }]
+    let a = [
+        { 'params': { 'id': '1' } }, 
+        { 'params': { 'id': '2' } }, 
+        { 'params': { 'id': '3' } }, 
+        { 'params': { 'id': '4' } }, 
+        { 'params': { 'id': '5' } }
+    ]
     //console.log(a)
     return {
         paths:a,

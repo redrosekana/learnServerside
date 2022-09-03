@@ -5,7 +5,7 @@ export default function Eroror() {
     <div></div>
   ) 
 }
-export async function getStaticProps(context){
+export async function getStaticProps(){
     return {
         notFound:true
     }

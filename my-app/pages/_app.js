@@ -2,6 +2,7 @@ import React from "react"
 import Head from "next/head"
 import Script from "next/script"
 import Layout from "../components/Layout"
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (

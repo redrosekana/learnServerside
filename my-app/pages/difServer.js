@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Server({data}) {
    return (
-    <div>
-      <p>{data.num}</p>
-    </div>
+    <main className='container p-3'>
+      <p className='display-3 text-center'>{data.num}</p>
+    </main>
   ) 
 }
 

@@ -1,29 +1,30 @@
 const user = [
-    {
-        id:1,
-        name:"luffy",
-        position:"caption"
-    },
-    {
-        id:2,
-        name:"zoro",
-        position:"blader"
-    },
-    {
-        id:3,
-        name:"nami",
-        position:"mapping"
-    },
-    {
-        id:4,
-        name:"sunji",
-        position:"chef"
-    },
-    {
-        id:5,
-        name:"usoop",
-        position:"gunner"
-    },
+    {name:"luffy"},
+    {name:"zoro"},
+    {name:"nami"},
+    {name:"sunji"},
+    {name:"usoop"},
+    {name:"jinbey"},
+    {name:"bagi"},
+    {name:"shank"},
+    {name:"roger"},
+    {name:"naruto"},
 ]
 
-module.exports = user
+const customer = [
+    {name:"kana"},
+    {name:"net"},
+    {name:"jack"},
+    {name:"fluck"},
+    {name:"max"},
+    {name:"mic"},
+    {name:"nut"},
+    {name:"gun"},
+    {name:"pool"},
+    {name:"jim"},
+]
+
+module.exports = {
+    user,customer
+}
+

@@ -14,8 +14,8 @@ export default function Extra() {
     
     useEffect(() => {
         timer(1)
-            return () => {
-                timer(2)  
+        return () => {
+          timer(2)  
         }
     },[])
 
@@ -24,9 +24,6 @@ export default function Extra() {
       time = setInterval(()=>{
         console.log(n)
         n++
-        if (n == 5){
-            console.log("ถึง 5 แล้ว")
-          }
       },1000)
     }else{
       clearInterval(time)
@@ -34,12 +31,12 @@ export default function Extra() {
   }
   
   return (
-    <>
+    <main className='container p-3'>
       <p className='text-center fs-2'>learn nextjs server rendering {m}</p>
       <div className='text-center'>
         <button className='btn btn-danger' onClick={() => setM(m+1)}>กด</button>
       </div>
       
-    </>
+    </main>
   )
 }

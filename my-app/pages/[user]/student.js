@@ -3,9 +3,9 @@ import React from 'react'
 /* ตัวอย่างการทำ dynamic ด้วยโฟลเดอร์ */
 export default function Student(props) {
   return (
-    <div>
-        <p>{props.data.id} {props.data.name}</p>
-    </div>
+    <main className='container p-3'>
+        <p className='text-center display-3'>{props.data.id} {props.data.name}</p>
+    </main>
   )
 }
 
@@ -27,16 +27,8 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
     const response = await fetch(`http://127.0.0.1:8000/users/${context.params.user}`)
     const data = await response.json()
-    if (context.params.user === "3"){
-        return {
-            notFound:true
-        }
-    }else{
-        return {
-            props: {data}
-        }
+    return {
+        props: {data}
     }
-
-    
 }
 

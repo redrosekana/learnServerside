@@ -2,8 +2,8 @@ const express = require("express")
 const bodyParser = require("body-parser")
 const cors = require("cors")
 const app = express()
-const user = require("./user")
-
+const user = require("./user").user
+const customer = require("./user").customer
 
 app.use(cors())
 app.use(express.urlencoded({extended:true}))
@@ -11,11 +11,21 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.json())
 
 app.get("/",(req,res)=>{
-    res.status(200).send("ok")
+    res.status(500).send("ok")
 })
 
 app.get("/user",(req,res)=>{
-    res.status(200).json(user)
+    const ar = user.map((e)=>{
+        return user[Math.floor(Math.random()*10)]
+    })
+    res.status(200).json(ar)
+})
+
+app.get("/customer",(req,res)=>{
+    const ar = customer.map((e)=>{
+        return customer[Math.floor(Math.random()*10)]
+    })
+    res.status(200).json(ar)
 })
 
 app.get("/user/:id",(req,res)=>{
@@ -23,7 +33,6 @@ app.get("/user/:id",(req,res)=>{
 })
 
 app.get("/users/:user",(req,res)=>{
-    console.log(req.params)
     res.status(200).json(user[req.params.user-1 || 0])
 })
 
